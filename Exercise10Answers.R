@@ -6,7 +6,8 @@ dogs <- read.csv("DogWeight.csv", header=TRUE, stringsAsFactors=FALSE)
 head(dogs)
 tail(dogs)
 
-ggplot(data=dogs, aes(x=Weeks, y=Weight)) +
+ggplot(data=dogs, aes(x=ï..Weeks, y=Weight)) +
   geom_point() +
+  xlab("Weeks") +
   stat_smooth(method="lm") +
   theme_classic()
